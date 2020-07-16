@@ -10,10 +10,10 @@ interface Props {
   type: string;
 }
 
-const FileListItem: React.FC<Props> = ({ name, type }: Props) => (
+const PageListItem: React.FC<Props> = ({ name, type }: Props) => (
   <Item>
     {name} ({type})
   </Item>
 );
 
-export default FileListItem;
+export default PageListItem;
