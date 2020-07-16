@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Screen from "./components/Screen";
+import FileList from "./components/FileList";
+import ConsoleOutput from "./components/ConsoleOutput";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <>
+    <Screen />
+    <FileList
+      files={[
+        { name: "hello.png", type: "image/png" },
+        { name: "world.png", type: "image/png" },
+      ]}
+    />
+    <ConsoleOutput lines={["Hello, world", "Goodble"]} />
+  </>
+);
 
 export default App;
